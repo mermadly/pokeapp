@@ -1,0 +1,147 @@
+@import "../colorPalette.scss";
+
+.itemContainer {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: $black;
+    width: 100%;
+    text-align: start;
+    margin: 0;
+    padding: 5px;
+  }
+}
+
+.itemTitle {
+  text-transform: capitalize;
+}
+.pokeImageContainer {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  .pokeImage {
+    width: 130px;
+    margin-bottom: 4px;
+  }
+}
+
+.cardItemContainer {
+  height: 350px;
+  width: 250px;
+  border-radius: 8px;
+  border: 10px solid $yellow;
+  padding: 10px;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(138, 124, 138, 1);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(138, 124, 138, 1);
+  box-shadow: 4px 4px 5px -2px rgba(138, 124, 138, 1);
+}
+
+.imgContainer {
+  background-color: $white;
+  border: 1px solid $black;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.pokeDescription {
+  font-size: 10px;
+  border: 1px solid $yellow;
+  display: block;
+  text-align: start;
+  padding: 3px;
+  bottom: 0;
+}
+
+.grass {
+  background: linear-gradient(
+    180deg,
+    rgba(11, 225, 100, 1) 0%,
+    rgba(229, 251, 221, 1) 75%,
+    rgba(11, 225, 100, 1) 85%,
+    rgba(94, 200, 139, 1) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/grass.jpg);
+    background-size: 250px;
+  }
+}
+
+.fire {
+  background: linear-gradient(
+    180deg,
+    rgba(249, 73, 73, 1) 0%,
+    rgba(229, 251, 221, 1) 75%,
+    rgba(249, 65, 65, 1) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/fire.jpg);
+    background-size: 250px;
+  }
+}
+
+.water {
+  background: linear-gradient(
+    180deg,
+    rgba(63, 187, 232, 1) 0%,
+    rgba(229, 251, 221, 1) 75%,
+    rgba(41, 193, 220, 1) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/water.png);
+    background-size: 250px;
+  }
+}
+
+.bug {
+  background: linear-gradient(
+    180deg,
+    rgba(97, 201, 81, 1) 0%,
+    rgba(229, 251, 221, 1) 75%,
+    rgba(102, 167, 69, 1) 85%,
+    rgba(44, 113, 34, 1) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/bug.png);
+    background-size: 250px;
+  }
+}
+
+.electric {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 233, 65, 1) 0%,
+    rgba(229, 251, 221, 1) 75%,
+    rgba(255, 238, 0, 1) 85%,
+    rgba(244, 255, 32, 1) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/thunder.jpg);
+    background-size: 270px;
+  }
+}
+
+.flying {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 233, 65, 1) 0%,
+    rgba(229, 251, 221, 1) 75%,
+    rgba(255, 238, 0, 1) 85%,
+    rgba(244, 255, 32, 1) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/flying.jpg);
+    background-size: 270px;
+  }
+}

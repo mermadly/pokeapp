@@ -1,0 +1,15 @@
+@import "../colorPalette.scss";
+
+.link {
+  text-decoration: none;
+  text-transform: uppr;
+  color: $white;
+  height: 250px;
+}
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 150px;
+}
