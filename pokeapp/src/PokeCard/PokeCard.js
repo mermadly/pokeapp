@@ -26,13 +26,23 @@ const PokeCard = (props) => {
 
   return (
     <Link className="link" to="/card" to={{ pathname: `/card/${speciesID}` }}>
-      <div className="cardContainer">
-        <div className="cardTitle">{props.name}</div>
-        <div className="imgContainer">
-          <img src={imageUrl} alt="" />
+      {speciesID > 807 ? (
+        <div className="cardContainer hidden">
+          <div className="cardTitle"></div>
+          <div className="imgContainer">
+            <img alt="" />
+          </div>
+          <span className="pokeID"></span>
         </div>
-        <span className="pokeID">ID. {speciesID}</span>
-      </div>
+      ) : (
+        <div className="cardContainer">
+          <div className="cardTitle">{props.name}</div>
+          <div className="imgContainer">
+            <img src={imageUrl} alt="" />
+          </div>
+          <span className="pokeID">ID. {speciesID}</span>
+        </div>
+      )}
     </Link>
   );
 };

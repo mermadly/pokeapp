@@ -12,7 +12,8 @@ const App = (props) => {
         <Header />
         <Switch>
           <Route exact path="/" component={PokeList} />
-          <Route exact path="/card/:id" component={PokeItem} />
+          <Route path="/page:id" component={PokeList} />
+          <Route path="/card/:id" component={PokeItem} />
         </Switch>
       </Router>
     </div>

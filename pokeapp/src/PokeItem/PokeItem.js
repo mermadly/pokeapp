@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./PokeItem.scss";
+import { Link } from "react-router-dom";
 
 const PokeItem = (props) => {
   const [pokeTypes, setPokeTypes] = useState([]);
@@ -47,8 +48,6 @@ const PokeItem = (props) => {
     );
   }, [props.match.params.id]);
 
-  console.log(pokeImage);
-
   return (
     <div className="itemContainer">
       <div className={`cardItemContainer ${pokeTypes[0]}`}>
@@ -58,6 +57,30 @@ const PokeItem = (props) => {
         </div>
         <span className="pokeDescription">{pokeDescription}</span>
       </div>
+      {props.match.params.id > 1 ? (
+        <Link
+          to={{ pathname: `/card/${parseInt(props.match.params.id) - 1}` }}
+          className="arrowLink arrowLeft"
+        >
+          <button>Previous</button>
+        </Link>
+      ) : (
+        <Link to={{ pathname: `/card/807` }} className="arrowLink arrowLeft">
+          <button>Previous</button>
+        </Link>
+      )}
+      {props.match.params.id < 807 ? (
+        <Link
+          to={{ pathname: `/card/${parseInt(props.match.params.id) + 1}` }}
+          className="arrowLink arrowRight"
+        >
+          <button>Next</button>
+        </Link>
+      ) : (
+        <Link to={{ pathname: `/card/1` }} className="arrowLink arrowRight">
+          <button>Next</button>
+        </Link>
+      )}
     </div>
   );
 };

@@ -2,9 +2,7 @@
 
 .link {
   text-decoration: none;
-  text-transform: uppr;
   color: $white;
-  height: 250px;
 }
 
 .listContainer {
@@ -12,4 +10,37 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 150px;
+  position: relative;
+}
+
+.arrowLink {
+  position: absolute;
+  top: 45%;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-top: 5px solid #4b4b4b;
+  border-right: 5px solid #4b4b4b;
+  box-shadow: 0 0 0 lightgray;
+  transition: all 200ms ease;
+
+  &.arrowLeft {
+    left: -80px;
+    transform: translate3d(0, -50%, 0) rotate(-135deg);
+    border-top-right-radius: 8px;
+  }
+
+  &.arrowRight {
+    right: -80px;
+    transform: translate3d(0, -50%, 0) rotate(45deg);
+    border-top-right-radius: 8px;
+  }
+  &:hover {
+    border-color: $yellow;
+    box-shadow: 5px -5px 0 #4b4b4b;
+  }
+}
+
+button {
+  display: none;
 }
