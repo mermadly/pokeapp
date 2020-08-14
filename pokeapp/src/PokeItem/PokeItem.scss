@@ -66,6 +66,7 @@
 
 .cardItemContainer {
   height: 350px;
+  // min-height: 350px;
   width: 250px;
   border-radius: 8px;
   border: 10px solid $yellow;
@@ -117,7 +118,7 @@
   background: linear-gradient(
     180deg,
     rgba(249, 73, 73, 1) 0%,
-    rgba(229, 251, 221, 1) 75%,
+    rgb(245, 229, 229) 75%,
     rgba(249, 65, 65, 1) 100%
   );
   .pokeImageContainer {
@@ -130,7 +131,7 @@
   background: linear-gradient(
     180deg,
     rgba(63, 187, 232, 1) 0%,
-    rgba(229, 251, 221, 1) 75%,
+    rgb(255, 255, 255) 75%,
     rgba(41, 193, 220, 1) 100%
   );
   .pokeImageContainer {
@@ -143,9 +144,8 @@
   background: linear-gradient(
     180deg,
     rgba(97, 201, 81, 1) 0%,
-    rgba(229, 251, 221, 1) 75%,
-    rgba(102, 167, 69, 1) 85%,
-    rgba(44, 113, 34, 1) 100%
+    rgb(233, 249, 231) 75%,
+    rgba(102, 167, 69, 1) 100%
   );
   .pokeImageContainer {
     background-image: url(../Images/bug.png);
@@ -157,7 +157,7 @@
   background: linear-gradient(
     180deg,
     rgba(255, 233, 65, 1) 0%,
-    rgba(229, 251, 221, 1) 75%,
+    rgb(255, 255, 255) 75%,
     rgba(255, 238, 0, 1) 85%,
     rgba(244, 255, 32, 1) 100%
   );
@@ -171,12 +171,76 @@
   background: linear-gradient(
     180deg,
     rgba(255, 233, 65, 1) 0%,
-    rgba(229, 251, 221, 1) 75%,
+    rgb(255, 255, 255) 75%,
     rgba(255, 238, 0, 1) 85%,
     rgba(244, 255, 32, 1) 100%
   );
   .pokeImageContainer {
     background-image: url(../Images/flying.jpg);
     background-size: 270px;
+  }
+}
+
+.normal {
+  background: linear-gradient(
+    180deg,
+    rgb(181, 144, 144) 0%,
+    rgb(255, 255, 255) 75%,
+    rgb(186, 147, 147) 85%,
+    rgb(175, 132, 132) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/flying.jpg);
+    background-size: 270px;
+  }
+}
+
+.ground {
+  background: linear-gradient(
+    180deg,
+    rgb(194, 127, 68) 0%,
+    rgb(255, 255, 255) 75%,
+    rgb(204, 122, 56) 85%,
+    rgb(191, 107, 42) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/flying.jpg);
+    background-size: 270px;
+  }
+}
+
+.poison {
+  background: linear-gradient(
+    180deg,
+    rgb(112, 80, 126) 0%,
+    rgb(243, 234, 250) 75%,
+    rgb(131, 103, 141) 85%,
+    rgb(145, 92, 161) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/poison.png);
+    background-size: 300px;
+    background-position: right bottom;
+  }
+}
+
+.dark {
+  color: $white;
+
+  .itemTitle {
+    font-weight: bold;
+    color: $white;
+  }
+  background: linear-gradient(
+    180deg,
+    rgb(54, 63, 89) 0%,
+    rgb(203, 203, 233) 75%,
+    rgb(56, 52, 82) 85%,
+    rgb(37, 45, 70) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/dark.png);
+    background-size: 350px;
+    background-position: left center;
   }
 }
