@@ -10,7 +10,7 @@ const PokeItem = (props) => {
   const [pokeStats, setPokeStats] = useState({});
   const [pokeImage, setPokeImage] = useState(
     `https://pokeres.bastionbot.org/images/pokemon/${props.match.params.id}.png`
-  );
+  )
 
   const search = async () => {
     const url = `https://pokeapi.co/api/v2/pokemon-species/${props.match.params.id}/`;
@@ -30,6 +30,11 @@ const PokeItem = (props) => {
 
     const respuesta = await fetch(url);
     const data = await respuesta.json();
+
+    let statsObj = {}
+    data.stats.forEach(stat => {
+      statsObj = {...statsObj, stat["stat"]["name"]: stat.base_stat}
+    })
 
     const arrType = [];
     data.types.map((type) => {
