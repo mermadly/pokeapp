@@ -11,6 +11,7 @@ const PokeItem = (props) => {
   const [pokeImage, setPokeImage] = useState(
     `https://pokeres.bastionbot.org/images/pokemon/${props.match.params.id}.png`
   );
+  const [pokeTest, setPokeTest] = useState({});
 
   const search = async () => {
     const url = `https://pokeapi.co/api/v2/pokemon-species/${props.match.params.id}/`;
@@ -33,7 +34,7 @@ const PokeItem = (props) => {
 
     let statsObj = {};
     data.stats.forEach((stat) => {
-      // statsObj = {...statsObj, stat["stat"]["name"]: stat.base_stat}
+      statsObj = { ...statsObj, [stat.stat.name]: stat.base_stat };
     });
 
     const arrType = [];
@@ -43,6 +44,7 @@ const PokeItem = (props) => {
 
     setPokeTypes(arrType);
     setPokeName(data.name);
+    setPokeStats(statsObj);
   };
 
   useEffect(() => {
@@ -55,13 +57,20 @@ const PokeItem = (props) => {
 
   return (
     <div className="itemContainer">
-      <div className={`cardItemContainer ${pokeTypes[0]}`}>
-        <p className="itemTitle">{pokeName}</p>
-        <div className="pokeImageContainer">
-          <img className="pokeImage" src={pokeImage} alt="" />
+      {pokeStats.hp != undefined ? (
+        <div className={`cardItemContainer ${pokeTypes[0]}`}>
+          <div className="cardTitle">
+            <span className="itemTitle">{pokeName}</span>
+            <span>
+              <span className="hp">HP</span> {pokeStats.hp}
+            </span>
+          </div>
+          <div className="pokeImageContainer">
+            <img className="pokeImage" src={pokeImage} alt="" />
+          </div>
+          <span className="pokeDescription">{pokeDescription}</span>
         </div>
-        <span className="pokeDescription">{pokeDescription}</span>
-      </div>
+      ) : null}
       {props.match.params.id > 1 ? (
         <Link
           to={{ pathname: `/card/${parseInt(props.match.params.id) - 1}` }}

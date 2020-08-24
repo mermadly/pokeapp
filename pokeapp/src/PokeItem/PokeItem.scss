@@ -15,6 +15,16 @@
     padding: 5px;
   }
 
+  .cardTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    .hp {
+      font-size: 10px;
+      font-weight: bold;
+    }
+  }
+
   .arrowLink {
     position: absolute;
     top: 45%;
@@ -186,8 +196,9 @@
     rgb(175, 132, 132) 100%
   );
   .pokeImageContainer {
-    background-image: url(../Images/flying.jpg);
+    background-image: url(../Images/normal.png);
     background-size: 270px;
+    background-position: bottom center;
   }
 }
 
@@ -200,8 +211,39 @@
     rgb(191, 107, 42) 100%
   );
   .pokeImageContainer {
-    background-image: url(../Images/flying.jpg);
-    background-size: 270px;
+    background-image: url(../Images/ground.png);
+    background-size: 300px;
+    background-position: bottom right;
+  }
+}
+
+.rock {
+  background: linear-gradient(
+    180deg,
+    rgb(230, 125, 45) 0%,
+    rgb(255, 255, 255) 75%,
+    rgb(230, 125, 45) 85%,
+    rgb(220, 98, 41) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/rock.png);
+    background-size: 260px;
+    background-position: top right;
+  }
+}
+
+.fighting {
+  background: linear-gradient(
+    180deg,
+    rgb(242, 123, 79) 0%,
+    rgb(255, 255, 255) 75%,
+    rgb(247, 120, 74) 85%,
+    rgb(238, 117, 80) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/fighting.jpg);
+    background-size: 425px;
+    background-position: bottom center;
   }
 }
 
@@ -216,6 +258,21 @@
   .pokeImageContainer {
     background-image: url(../Images/poison.png);
     background-size: 300px;
+    background-position: right bottom;
+  }
+}
+
+.psychic {
+  background: linear-gradient(
+    180deg,
+    rgb(149, 82, 177) 0%,
+    rgb(243, 234, 250) 75%,
+    rgb(191, 97, 220) 85%,
+    rgb(139, 66, 165) 100%
+  );
+  .pokeImageContainer {
+    background-image: url(../Images/psychic.png);
+    background-size: 250px;
     background-position: right bottom;
   }
 }
